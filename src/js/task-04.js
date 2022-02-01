@@ -9,15 +9,19 @@ const buttonsContainer = document.getElementById("counter");
 //доступ к элементу span
 const value = document.querySelector('#value');
 
+var total = 0;
+
 //функция по уменьшению значения value.textContent
 const handleDecrementClick = () => {
-    value.textContent = Number(value.textContent) - 1;
+    total -= 1;
+    value.textContent = total;
 };
 
 //функция по увеличению значения value.textContent
 
 const handleIncrementClick = () => {
-    value.textContent = Number(value.textContent) + 1;
+    total += 1;
+    value.textContent = total;
 };
 
 
