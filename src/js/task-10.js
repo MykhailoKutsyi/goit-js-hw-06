@@ -1,12 +1,12 @@
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
-
+let divSize = 20;
 function createBoxes(amount) {
   // console.log('amount', amount);
 
   const boxes = document.querySelector('#boxes');
-  let divSize = 20;
+  
     
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement('div');
@@ -29,6 +29,7 @@ function destroyBoxes() {
   const box = document.createElement('div');
   box.id = 'boxes';
   controls.after(box);
+  divSize = 20;
 }
 
 
